@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/style.css" rel="stylesheet">
+</head>
+<body>
+<h1 class="text-3xl font-bold underline">
+    Hello world!
+</h1>
+<div class="relative h-[100px]">
+    <h1></h1>
+    <div id="move_div" class="absolute top-0 left-0 w-[100px] h-[100px] bg-amber-950">
+
+    </div>
+</div>
+<button>버튼</button>
+<ul></ul>
+<script>
+    const $button = document.querySelector('button');
+    const $ul = document.querySelector('ul');
+    const $move = document.getElementById('move_div');
+
+    let px = 100;
+
+    $button.addEventListener('click', function () {
+        $move.style.left = px + "px";
+        $button.innerHTML = "글자 바뀜";
+        $button.style.padding = "10px";
+        $ul.innerHTML = $ul.innerHTML + '<li>목록태그</li>';
+        px = px + 10;
+    });
+
+</script>
+</body>
+</html>
