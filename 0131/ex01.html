@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1>간단한 증가 감소</h1>
+        <h3 id="h33">0</h3>
+        <button id="increase">증가</button>
+        <button id="decrease">감소</button>
+    </div>
+    <script>
+        let num = 0;
+        const aa = document.getElementById('increase');
+        const bb = document.getElementById('decrease');
+        const cc = document.getElementById('h33');
+
+        aa.onclick = function () {
+            console.log(num);
+            
+            cc.textContent = num ++;
+        }
+
+        bb.onclick = function () {
+            console.log(num);
+            cc.textContent = num --;
+        }
+    </script>
+</body>
+
+</html>
