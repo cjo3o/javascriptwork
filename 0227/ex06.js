@@ -1,0 +1,11 @@
+const a = '10.45';
+const b = Number(a);
+console.log(typeof b);
+
+const c = new String('10.45');
+const d = String('10.45');
+
+console.log(c);
+console.log(typeof c);
+console.log(d);
+console.log(typeof d);
