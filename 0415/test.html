@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>테스트</h1>
+        <div id="app">
+
+        </div>
+        <button onclick="updateList()">생성</button>
+    </div>
+<script>
+    function updateList() {
+        const items = ["사과", "바나나", "포도", "파인애플"];
+        let html = "<ul>";
+        for (const item of items) {
+            html += "<li>" + item + "</li>";
+        }
+        html += "</ul>";
+        document.querySelector('#app').innerHTML = html;
+    }
+</script>
+</body>
+</html>
