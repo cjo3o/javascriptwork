@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<ul id="fr">
+    <li>Apple</li>
+    <li>Banana</li>
+    <li>Melon</li>
+</ul>
+<script>
+    const $ul = document.querySelector('#fr');
+
+    const $frag = document.createDocumentFragment();
+
+    ['a', 'b', 'c'].forEach(item => {
+        const $li = document.createElement('li');
+        const textNode = document.createTextNode(item);
+        $li.appendChild(textNode);
+
+        console.log($li);
+        $frag.appendChild($li);
+        $ul.appendChild($frag);
+    });
+    const $li = document.createElement('li');
+    const textNode = document.createTextNode('🍜');
+    $li.appendChild(textNode);
+
+    $ul.appendChild($li);
+</script>
+</body>
+</html>

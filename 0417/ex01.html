@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div>
+    <ul id="fr">
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Melon</li>
+    </ul>
+    <button onclick="addLi()">li추가</button>
+    <button onclick="delLi()">li삭제</button>
+</div>
+<script>
+    const $ul = document.getElementById('fr');
+
+    console.log($ul.childNodes.length);
+
+    const result = $ul.lastChild;
+    console.log(result);
+    result.textContent = '텍스트내용추가';
+
+    const htmlCollection = document.getElementsByTagName('li');
+    console.log(htmlCollection);
+
+    const nodeList = document.querySelectorAll('li');
+    console.log(nodeList);
+
+    function addLi() {
+        const $li = document.createElement('li');
+        $li.textContent = `Grape`;
+        $ul.appendChild($li);
+
+        console.log(htmlCollection);
+    }
+
+    function delLi() {
+        $ul.removeChild($ul.lastElementChild);
+
+        console.log(htmlCollection);
+        console.log(nodeList);
+    }
+</script>
+</body>
+</html>
