@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<input type="text" id="id" value="안녕하세요">
+<button onclick="func()">속성프로퍼티확인</button>
+<ul id="fr">
+    <li>Apple</li>
+    <li>Banana</li>
+    <li>Orange</li>
+</ul>
+<script>
+    const $id = document.querySelector('#id');
+    $id.oninput = function() {
+        console.log($id.value);
+        console.log($id.getAttribute('value'));
+    }
+
+    $id.value = "변경변경";
+
+    function func() {
+        console.log($id.getAttribute('value'));
+        console.log($id.value);
+    }
+</script>
+</body>
+</html>
