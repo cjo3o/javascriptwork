@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<ul>
+    <li>바나나</li>
+    <li>사과</li>
+    <li>수박</li>
+</ul>
+<button id="button" onclick="sayHi('lee')">
+    버튼
+</button>
+<script>
+    const $ul = document.getElementsByTagName('ul')[0];
+    console.log($ul.style.width);
+    console.log(window.getComputedStyle($ul).width);
+    function sayHi(name) {
+        console.log(name);
+    }
+    document.querySelector('button').onclick = function () {
+        console.log('조금 더 새로운 방식');
+    }
+    document.querySelector('button').addEventListener('click', function () {
+        console.log('제일 최신 방식')
+    })
+</script>
+</body>
+</html>
