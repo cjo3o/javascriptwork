@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        active {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>바나나</li>
+    <li>사과</li>
+    <li>수박</li>
+</ul>
+<script>
+    const $ul = document.querySelector('ul');
+    console.log($ul.children);
+
+    [...$ul.children].forEach(($li) => ($li.onclick = active));
+
+    function active(e) {
+        console.log(e);
+    }
+</script>
+</body>
+</html>
